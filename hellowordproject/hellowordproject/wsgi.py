@@ -1,3 +1,7 @@
+# wsgi(web server gateway interface)
+# Djangoとwebserverがコミュニケーションをする際に必要
+
+
 """
 WSGI config for hellowordproject project.
 

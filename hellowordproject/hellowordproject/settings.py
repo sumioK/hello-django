@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+# ディレクトリの基礎となる場所を定義してる
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -23,13 +24,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-@2y@opszc1cm8%_dig@_xs&$0h$-e#1(2c3izd#f77!(#bf!5k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# browserにエラーが吐かれる(本番環境でTrueにしてしまうと、ユーザーから情報をとられてしまう可能性がある)
 DEBUG = True
 
+# どのserverからアクセスを許可するかを設定する
 ALLOWED_HOSTS = []
 
 
 # Application definition
 
+# Djangoがデフォルトで用意しているアプリケーション
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+# 情報を受け取って何かしらの処理をする
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -51,6 +56,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'hellowordproject.urls'
 
+# HTMLファイルを扱うときに必要
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

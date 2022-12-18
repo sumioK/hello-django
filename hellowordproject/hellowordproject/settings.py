@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'helloworldapp.apps.HelloworldappConfig',
 ]
 
 # 情報を受け取って何かしらの処理をする

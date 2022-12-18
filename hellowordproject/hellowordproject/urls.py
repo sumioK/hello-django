@@ -5,6 +5,6 @@ from .views import helloworldfunction, HelloWorldClass
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('helloworld/', helloworldfunction),
-    path('helloworld2/', HelloWorldClass.as_view())
-    path('', include('helloworldapp.urls'))
+    path('helloworld2/', HelloWorldClass.as_view()),
+    path('app/', include('helloworldapp.urls'))
 ]
